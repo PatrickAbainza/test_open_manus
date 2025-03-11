@@ -20,6 +20,8 @@
      - [x] `repo` (Full control of private repositories)
      OR
      - [x] `public_repo` (Access public repositories)
+     - [x] `security_events` (Read and write security events)
+     - [x] `workflow` (Update GitHub Actions workflow files)
 
 5. Generate and Copy Token:
    - Click "Generate token"
