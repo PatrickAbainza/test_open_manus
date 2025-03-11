@@ -49,3 +49,9 @@ jobs:
           category: "/language:${{ matrix.language }}"
         env:
           CODEQL_ACTION_VERBOSE: 2 # Enable verbose logging for analysis
+      - name: Display CodeQL Errors (if any)
+        if: failure()
+        run: |
+          echo "CodeQL Analysis Failed! Check error logs:"
+          cat /home/runner/work/_temp/codeql_Action/codeql-action-analyze.log || true
+          echo "--- End of CodeQL error logs ---"
