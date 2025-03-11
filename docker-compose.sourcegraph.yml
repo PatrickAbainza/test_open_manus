@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  sourcegraph:
+    image: sourcegraph/server:3.40.0
+    ports:
+      - "7080:7080"
+      - "2633:2633"
+    volumes:
+      - sourcegraph-data:/var/opt/sourcegraph
+    environment:
+      - EXTERNAL_URL=http://localhost:7080
+      - SRC_LOG_LEVEL=info
+
+volumes:
+  sourcegraph-data:
