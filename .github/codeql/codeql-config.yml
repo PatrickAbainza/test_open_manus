@@ -1,0 +1,4 @@
+# .github/codeql/codeql-config.yml
+
+queries:
+  - uses: security-and-quality
