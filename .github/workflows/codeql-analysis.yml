@@ -40,8 +40,12 @@ jobs:
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
+        env:
+          CODEQL_ACTION_VERBOSE: 2 # Enable verbose logging for autobuild
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with:
           category: "/language:${{ matrix.language }}"
+        env:
+          CODEQL_ACTION_VERBOSE: 2 # Enable verbose logging for analysis
